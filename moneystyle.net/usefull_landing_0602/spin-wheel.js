@@ -41,6 +41,10 @@ function hidemodal03() {
   runSpin("spinAround3", "#modal04", 4);
 }
 
+function gotoW() {
+  window.location.href = "https://google.com";
+}
+
 /***********************************************/
 // events
 /***********************************************/
@@ -50,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalButtonFirst = document.getElementById("modalButtonFirst");
   const modalButtonSecond = document.getElementById("modalButtonSecond");
   const modalButtonThird = document.getElementById("modalButtonThird");
+  const downloadCta = document.getElementById("i5mzwz");
 
   function clickListener(event) {
     const target = event.target;
@@ -64,6 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (target === modalButtonThird) {
       hidemodal03();
+    }
+
+    if (target === downloadCta || (downloadCta && downloadCta.contains(target))) {
+      gotoW();
     }
   }
 
